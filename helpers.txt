@@ -1,3 +1,0 @@
-docker build -t wellalencar/codeeducation .
-
-docker run -it --rm --name run-golang  wellalencar/codeeducation
