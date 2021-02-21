@@ -9,7 +9,6 @@ RUN go get -d -v \
   && go install -v \
   && go build
 
-
 ## Multistage Building
 
 FROM scratch

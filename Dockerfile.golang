@@ -1,0 +1,12 @@
+FROM golang:1.15.8
+
+WORKDIR /go/src/api
+COPY . .
+
+RUN \
+    go get -d -v \
+    && go install -v \
+    && go build
+
+EXPOSE 3000
+CMD ["./api"]

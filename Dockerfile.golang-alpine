@@ -1,0 +1,13 @@
+FROM golang:1.15.8-alpine3.13 
+
+RUN apk add --no-cache --update git
+
+WORKDIR /go/src/api
+COPY . .
+
+RUN go get -d -v \
+  && go install -v \
+  && go build
+
+EXPOSE 3000
+CMD ["./api"]
