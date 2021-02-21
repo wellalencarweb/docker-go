@@ -9,7 +9,8 @@ RUN go get -d -v \
   && go install -v \
   && go build
 
-##
+
+## Multistage Building
 
 FROM scratch
 COPY --from=multistage /go/bin/api /go/bin/
