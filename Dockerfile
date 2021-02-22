@@ -7,11 +7,12 @@ COPY . .
 
 RUN go get -d -v \
   && go install -v \
-  && go build
+  && go build -ldflags '-w -s' -a -installsuffix cgo -o hello .
+
 
 ## Multistage Building
 
 FROM scratch
-COPY --from=multistage /go/bin/api /go/bin/
+COPY --from=multistage /go/src/api/hello .
 EXPOSE 3000
-CMD ["/go/bin/api"]
+CMD [ "./hello" ]
