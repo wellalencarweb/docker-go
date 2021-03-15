@@ -29,4 +29,5 @@ Exemple Optimize Docker Images for Production
 ### based on the articles:
 
 1. https://www.digitalocean.com/community/tutorials/how-to-optimize-docker-images-for-production
+
 1. https://bitfieldconsulting.com/golang/docker-image
